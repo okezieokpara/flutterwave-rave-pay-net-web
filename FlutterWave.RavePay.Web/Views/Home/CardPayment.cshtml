@@ -1,8 +1,51 @@
-﻿
+﻿@model CardPayModel
 @{
     ViewData["Title"] = "Card Payments";
 }
 
-<div>
-    <p>Card Payment</p>
+
+<p>Test the RavePay card payment feature</p>
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <label for="cc-name">Card Number</label>
+        <input type="text" class="form-control" id="cc-name" placeholder="" required>
+        <small class="text-muted">The number on the face of the card</small>
+        <div class="invalid-feedback">
+            The number on the face of the card
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <label for="cc-expiration">CVV</label>
+        <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+        <div class="invalid-feedback">
+            Expiration date required
+        </div>
+    </div>
 </div>
+<div class="row">
+    <div class="col-md-3 mb-3">
+        <label for="cc-expiration">Expiry Month</label>
+        <input type="text" class="form-control" id="cc-month" placeholder="" required>
+        <div class="invalid-feedback">
+            Expiration date required
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <label for="cc-expiration">Expiry Year</label>
+        <input type="text" class="form-control" id="cc-year" placeholder="" required>
+        <div class="invalid-feedback">
+            Security code required
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <label for="cc-expiration">Pin</label>
+        <input type="text" class="form-control" id="cc-pin" placeholder="" required>
+        <div class="invalid-feedback">
+            Security code required
+        </div>
+    </div>
+</div>
+<hr class="mb-4">
+<button class="btn btn-primary btn-lg btn-block" type="submit">Pay With Card</button>
+
+

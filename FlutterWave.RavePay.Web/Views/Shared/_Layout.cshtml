@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,17 +11,33 @@
         <link rel="stylesheet" href="~/css/form-validation.css" />
     </environment>
 </head>
+
 <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="@Url.Action("Index", "Home")">RavePay.NET</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+            <span class="navbar-text">Please Note that this is a demo-only site. DO NOT use real payment cards and accounts <a href="@Url.Action("", "TestCards", "Home")" class="btn btn-outline-success">Dummy Cards</a> <a href="@Url.Action("TestAccounts", "Home")" class="btn btn-outline-success">Test Accounts</a></span>
+        </div>
+    </nav>
     <div class="container">
         <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+           <a href="@Url.Action("Index", "Home")"> <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="Home" width="72" height="72"></a>
             <h2>RavePay Payment Examples</h2>
-            <p class="lead">This is a sample .NET project that demonstrates the features of the Flutterwave <a href="https://ravepay.co">RavePay</a> API implemented as a <a href="https://github.com/okezieokpara/FlutterWave.RavePay.Net">.NET Library</a></p>
-            
+            <p class="lead">This is a sample .NET project that demonstrates the features of the Flutterwave
+                <a href="https://ravepay.co">RavePay</a> API implemented as a
+                <a href="https://github.com/okezieokpara/FlutterWave.RavePay.Net">.NET Library</a>
+            </p>
+
         </div>
 
         <div class="row">
             <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">@ViewData["Title"]</h4>
                 @RenderBody()
             </div>
             @Html.Partial("_SideBar")
@@ -29,9 +46,15 @@
         <footer class="my-5 pt-5 text-muted text-center text-small">
             <p class="mb-1">&copy; 2017-2018 Company Name</p>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Privacy</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Support</a></li>
+                <li class="list-inline-item">
+                    <a href="#">Privacy</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">Terms</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">Support</a>
+                </li>
             </ul>
         </footer>
 
@@ -43,9 +66,10 @@
             <script src="~/js/site.js" asp-append-version="true"></script>
         </environment>
 
-      
+
 
         @RenderSection("Scripts", required: false)
     </div>
 </body>
+
 </html>
