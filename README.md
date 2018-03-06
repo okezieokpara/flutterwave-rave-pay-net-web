@@ -1,2 +1,5 @@
-# flutterwave-rave-pay-net-web
-A Sample .NET Web Project that showcases the FlutterWave RavePay .NET Library
+FlutterWave.RavePay.NET
+=======================
+
+A Sample .NET Web Project that showcases the FlutterWave RavePay [.NET
+Librar](https://github.com/okezieokpara/FlutterWave.RavePay.Net)y
